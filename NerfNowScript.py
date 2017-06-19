@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-__author__ = "Alex Eggers"
-
 import os
 import urllib
 
