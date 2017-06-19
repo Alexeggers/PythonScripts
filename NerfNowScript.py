@@ -7,11 +7,12 @@ from urllib.request import Request, urlopen, urlretrieve
 
 nerf_now_url = "http://www.nerfnow.com/comic/"
 
-# First comic to be downloaded
-start = 10
+# First comic to be downloaded. Do not go lower than 4,
+# it is the first for some reason.
+start = 4
 
-# Upper border of comics, this one isn't downloaded
-finish = 12
+# Last comic to be downloaded
+finish = 4
 
 # Time in seconds
 delay = 5
@@ -37,7 +38,7 @@ def prep_work():
     urllib.request.install_opener(opener)
 
 if __name__ == "__main__":
-    comic_numbers = list(range(start, finish))
+    comic_numbers = list(range(start, finish + 1))
     prep_work()
     for number in comic_numbers:
         get_image(str(number))
