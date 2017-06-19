@@ -24,8 +24,8 @@ def make_soup(url):
 def get_image(number):
     soup = make_soup(nerf_now_url + number)
     found_div = soup.find('div', attrs = {'id': 'comic'})
-    found_div = found_div.find('img')
-    image_url = found_div['src']
+    image_element = found_div.find('img')
+    image_url = image_element['src']
     urlretrieve(image_url, number + ".jpg")
 
 def prep_work():
