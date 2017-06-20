@@ -1,5 +1,4 @@
 import os
-import urllib
 
 from requests import get
 from time import sleep
