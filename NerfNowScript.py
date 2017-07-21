@@ -9,13 +9,13 @@ dir_name = "NerfNowComics"
 
 # First comic to be downloaded. Do not go lower than 4,
 # it is the first for some reason.
-start = 4
+start = 10
 
 # Last comic to be downloaded
-finish = 4
+finish = 20
 
 # Time in seconds
-delay = 5
+delay = 1
 
 def make_soup(url):
     html = get(url).text
